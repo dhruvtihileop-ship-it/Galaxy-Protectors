@@ -1,8 +1,8 @@
 
 {
   "id": "./",
-  "name": "Space Shooter",
-  "short_name": "Space Shooter",
+  "name": "Galaxy Protectors",
+  "short_name": "Galaxy Protectors",
   "description": "A space shooting arcade game.",
   "start_url": "./",
   "scope": "./",
@@ -12,9 +12,10 @@
   "theme_color": "#080018",
   "icons": [
     {
-      "src": "assets/Hero.png",
-      "sizes": "any",
-      "type": "image/png"
+      "src": "./galaxy-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }
