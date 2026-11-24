@@ -1,0 +1,20 @@
+
+{
+  "id": "./",
+  "name": "Space Shooter",
+  "short_name": "Space Shooter",
+  "description": "A space shooting arcade game.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#080018",
+  "theme_color": "#080018",
+  "icons": [
+    {
+      "src": "assets/Hero.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}
