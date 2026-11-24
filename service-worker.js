@@ -1,28 +1,27 @@
 
-const CACHE_NAME = "space-shooter-level-1-v1";
+const CACHE_NAME = "galaxy-protectors-v2";
 
 const FILES = [
     "./",
     "./index.html",
-    "./css/style.css",
-    "./js/game.js",
-    "./assets/Background.jpg",
-    "./assets/Hero.png",
-    "./assets/Enemy1.jpg",
-    "./assets/Boss.jpg",
-    "./assets/Hero%20Bullet.png",
-    "./assets/Enemy%20bullet.png",
-    "./assets/normal-music.mp3",
-    "./assets/boss-music.mp3"
+    "./Style.css",
+    "./Game.js",
+    "./Background.jpg",
+    "./Hero.png",
+    "./Enemy1.jpg",
+    "./Boss.jpg",
+    "./Hero%20Bullet.png",
+    "./Enemy%20bullet.png",
+    "./normal-music.mp3",
+    "./boss-music.mp3"
 ];
 
 self.addEventListener("install", event => {
     event.waitUntil(
-        caches.open(CACHE_NAME).then(cache => {
-            return cache.addAll(FILES);
-        })
+        caches.open(CACHE_NAME).then(cache =>
+            cache.addAll(FILES)
+        )
     );
-
     self.skipWaiting();
 });
 
@@ -36,7 +35,6 @@ self.addEventListener("activate", event => {
             )
         )
     );
-
     self.clients.claim();
 });
 
@@ -45,19 +43,7 @@ self.addEventListener("fetch", event => {
 
     event.respondWith(
         caches.match(event.request).then(cached => {
-            if (cached) return cached;
-
-            return fetch(event.request).then(response => {
-                if (response.ok) {
-                    const copy = response.clone();
-
-                    caches.open(CACHE_NAME).then(cache => {
-                        cache.put(event.request, copy);
-                    });
-                }
-
-                return response;
-            });
+            return cached || fetch(event.request);
         })
     );
 });
