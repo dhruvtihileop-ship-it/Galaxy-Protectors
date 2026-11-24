@@ -50,22 +50,22 @@ function stopMusic() {
 
 // Images
 const background = new Image();
-background.src = "assets/Background.jpg";
+background.src = "Background.jpg";
 
 const heroImage = new Image();
-heroImage.src = "assets/Hero.png";
+heroImage.src = "Hero.png";
 
 const enemyImage = new Image();
-enemyImage.src = "assets/Enemy1.jpg";
+enemyImage.src = "Enemy1.jpg";
 
 const bossImage = new Image();
-bossImage.src = "assets/Boss.jpg";
+bossImage.src = "Boss.jpg";
 
 const heroBulletImage = new Image();
-heroBulletImage.src = "assets/Hero%20Bullet.png";
+heroBulletImage.src = "Hero%20Bullet.png";
 
 const enemyBulletImage = new Image();
-enemyBulletImage.src = "assets/Enemy%20bullet.png";
+enemyBulletImage.src = "Enemy%20bullet.png";
 
 // Game variables
 let player = {
