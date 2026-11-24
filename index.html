@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Protectors</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#080018">
+</head>
+<body>
+    <h1>GALAXY PROTECTORS</h1>
+
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+    </div>
+
+    <div id="controls">
+        <button id="leftBtn">◀</button>
+        <button id="rightBtn">▶</button>
+    </div>
+
+    <audio id="normalMusic" src="normal-music.mp3" loop></audio>
+    <audio id="bossMusic" src="boss-music.mp3" loop></audio>
+
+    <script src="Game.js"></script>
+
+    <script>
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./service-worker.js");
+    }
+    </script>
+</body>
+</html>
